@@ -1,4 +1,4 @@
-FROM httpd:latest
+FROM httpd:latest 
 MAINTAINER Nikos Kontothanasis "nikos.kontothanasis@gmail.com"
 
 RUN apt-get update -y 
