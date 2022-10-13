@@ -12,13 +12,13 @@ pipeline {
   stages {
         stage("Docker Build") {
             steps {
-              sh '/usr/local/bin/docker build -t web-server:v1 .'
+              sh "/usr/local/bin/docker build -t web-server:v1 ."
             }
         }
 
         stage("Docker Deploy") {
             steps {
-              sh '/usr/local/bin/docker run -d --name web-server -p 80:80 web-server:v1'
+              sh "/usr/local/bin/docker run -d --name web-server -p 80:80 web-server:v1"
             }
         }
   }
