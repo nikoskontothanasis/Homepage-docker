@@ -18,7 +18,7 @@ pipeline {
 
         stage("Docker Deploy") {
             steps {
-		sh "docker rm -f web-server:v1"
+		sh "docker rm -f web-server"
                 sh "/usr/local/bin/docker run -d --name web-server -p 80:80 web-server:v1"
             }
         }
